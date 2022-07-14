@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=meal.firstMeal %></title>
+</head>
+<body>
+    <h1>Customer meals</h1>
+    <ul>
+        <li>firstMeal: <%=meal.firstMeal %></li>
+        <li>secondMeal: <%=meal.secondMeal %></li>
+        <li>thirdMeal: <%=meal.thirdMeal %></li>
+        <li>snacks: <%=meal.snacks %></li>
+        <li>other: <%=meal.other %></li>
+        <li><a href="/meals/<%=meal.foodType._id%>"><%=meal.foodType%></a></li>
+    </ul>
+    <a href="/meals">All meals</a>
+    <form action="/meals/<%=meal._id%>?_method=DELETE" method="POST">
+        <button>DELETE</button>
+    </form>
+</body>
+</html>
